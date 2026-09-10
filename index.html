@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acessibilidade Auditiva - Exemplo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <header>
+    <h1>Portal Acessível</h1>
+  </header>
+
+  <main>
+    <!-- Seção de Vídeo com Legendas (<track>) -->
+    <section class="card">
+      <h2>Vídeo Institucional</h2>
+      <p>Assista ao nosso vídeo com legendas integradas ou leia a transcrição abaixo.</p>
+      
+      <div class="video-container">
+        <video controls width="100%">
+          <source src="video-exemplo.mp4" type="video/mp4">
+          <!-- O elemento <track> fornece as legendas VTT para deficientes auditivos (kind="captions") -->
+          <track kind="captions" src="legendas.vtt" srclang="pt" label="Português" default>
+          Seu navegador não suporta o elemento de vídeo.
+        </video>
+      </div>
+
+      <!-- Transcrição Textual do Vídeo -->
+      <details class="transcription">
+        <summary>Ler transcrição do vídeo em texto</summary>
+        <div class="transcription-text">
+          <p><strong>[Música de fundo suave]</strong></p>
+          <p><strong>Narrador:</strong> Bem-vindo ao nosso portal. Aqui garantimos que todo conteúdo seja acessível a todos.</p>
+          <p><strong>[Som de palmas]</strong></p>
+          <p><strong>Narrador:</strong> Obrigado por nos visitar!</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- Seção de Feedback Visual para Notificações -->
+    <section class="card">
+      <h2>Notificações do Sistema</h2>
+      <p>Envie uma mensagem e veja o alerta <strong>visual</strong> (sem dependência de sons).</p>
+      
+      <button id="btnNotificacao" type="button">Simular Alerta de Mensagem</button>
+
+      <!-- Área de Notificação Visual com propriedades ARIA para leitores de tela/tecnologia assistiva -->
+      <div id="painelAlerta" class="alerta-visual hidden" role="alert" aria-live="assertive">
+        <span class="icone" aria-hidden="true">🔔</span>
+        <span id="textoAlerta">Você tem uma nova mensagem!</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
