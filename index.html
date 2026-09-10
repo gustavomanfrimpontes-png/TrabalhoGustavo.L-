@@ -13,23 +13,14 @@
   </header>
 
   <main>
-    <!-- Seção de Vídeo com Legendas (<track>) -->
+    <!-- Seção de Conteúdo em Texto e Transcrição -->
     <section class="card">
-      <h2>Vídeo Institucional</h2>
-      <p>Assista ao nosso vídeo com legendas integradas ou leia a transcrição abaixo.</p>
-      
-      <div class="video-container">
-        <video controls width="100%">
-          <source src="video-exemplo.mp4" type="video/mp4">
-          <!-- O elemento <track> fornece as legendas VTT para deficientes auditivos (kind="captions") -->
-          <track kind="captions" src="legendas.vtt" srclang="pt" label="Português" default>
-          Seu navegador não suporta o elemento de vídeo.
-        </video>
-      </div>
+      <h2>Conteúdo Institucional</h2>
+      <p>Abaixo você encontra a transcrição completa da mensagem institucional.</p>
 
-      <!-- Transcrição Textual do Vídeo -->
-      <details class="transcription">
-        <summary>Ler transcrição do vídeo em texto</summary>
+      <!-- Transcrição Textual -->
+      <details class="transcription" open>
+        <summary>Transcrição em texto</summary>
         <div class="transcription-text">
           <p><strong>[Música de fundo suave]</strong></p>
           <p><strong>Narrador:</strong> Bem-vindo ao nosso portal. Aqui garantimos que todo conteúdo seja acessível a todos.</p>
@@ -46,7 +37,7 @@
       
       <button id="btnNotificacao" type="button">Simular Alerta de Mensagem</button>
 
-      <!-- Área de Notificação Visual com propriedades ARIA para leitores de tela/tecnologia assistiva -->
+      <!-- Área de Notificação Visual com propriedades ARIA -->
       <div id="painelAlerta" class="alerta-visual hidden" role="alert" aria-live="assertive">
         <span class="icone" aria-hidden="true">🔔</span>
         <span id="textoAlerta">Você tem uma nova mensagem!</span>
