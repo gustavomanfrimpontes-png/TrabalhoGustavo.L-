@@ -1,169 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acessibilidade Auditiva - Java + HTML</title>
-  <link rel="stylesheet" href="style.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>vc quer um tempo a mais?</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
-  <header>
-    <h1>Portal Acessível</h1>
-  </header>
-
+ <header class="cabecalho">
+     <h1>se liga na informação</h1>
+     <nav>
+         <a href="#" class="cabecalho-link">inicio</a>
+     </nav>
+ </header>
   <main>
-    <!-- Seção de Conteúdo em Texto -->
-    <section class="card">
-      <h2>Conteúdo Institucional</h2>
-      <p>Abaixo você encontra a transcrição completa da mensagem institucional.</p>
-
-      <details class="transcription" open>
-        <summary>Transcrição em texto</summary>
-        <div class="transcription-text">
-          <p><strong>[Música de fundo suave]</strong></p>
-          <p><strong>Narrador:</strong> Bem-vindo ao nosso portal. Aqui garantimos que todo conteúdo seja acessível a todos.</p>
-          <p><strong>[Som de palmas]</strong></p>
-          <p><strong>Narrador:</strong> Obrigado por nos visitar!</p>
-        </div>
-      </details>
-    </section>
-
-    <!-- Seção de Notificações com Integração Java -->
-    <section class="card">
-      <h2>Notificações do Sistema (Backend Java)</h2>
-      <p>Clique no botão para buscar a notificação vinda do servidor Java.</p>
-      
-      <button id="btnNotificacao" type="button">Buscar Notificação no Java</button>
-
-      <!-- Painel de Alerta Visual -->
-      <div id="painelAlerta" class="alerta-visual hidden" role="alert" aria-live="assertive">
-        <span class="icone" aria-hidden="true">🔔</span>
-        <div>
-          <strong id="textoAlerta">Carregando...</strong>
-          <p id="descricaoSom" style="font-size: 0.9em; font-style: italic; margin-top: 4px;"></p>
-        </div>
+ <h2>Descubra a verdade passando o mause</h2>
+ <section>
+     <article class="cartao">
+     <div class="cartao interno">
+         <div class="cartao-frente">
+             <img src="https://img.magnific.com/fotos-gratis/ao-por-do-sol-na-praia-tropical-e-no-mar-com-coqueiro_74190-1075.jpg?semt=ais_hybrid&w=740&q=80"alt="sol"class="cartao-imagem">
+             <p> é só um tempinho</p>
+         </div>
+         <div class="cartao-verso">
+            <img src="https://img.magnific.com/fotos-gratis/ao-por-do-sol-na-praia-tropical-e-no-mar-com-coqueiro_74190-1075.jpg?semt=ais_hybrid&w=740&q=80"alt="sol"class="cartao-imagem">
+             <p> é só um tempinho</p>
+         </div>
       </div>
-    </section>
-  </main>
-
-  <!-- Java<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acessibilidade Auditiva - Java + HTML</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <header>
-    <h1>Portal Acessível</h1>
-  </header>
-
-  <main>
-    <!-- Seção de Conteúdo em Texto -->
-    <section class="card">
-      <h2>Conteúdo Institucional</h2>
-      <p>Abaixo você encontra a transcrição completa da mensagem institucional.</p>
-
-      <details class="transcription" open>
-        <summary>Transcrição em texto</summary>
-        <div class="transcription-text">
-          <p><strong>[Música de fundo suave]</strong></p>
-          <p><strong>Narrador:</strong> Bem-vindo ao nosso portal. Aqui garantimos que todo conteúdo seja acessível a todos.</p>
-          <p><strong>[Som de palmas]</strong></p>
-          <p><strong>Narrador:</strong> Obrigado por nos visitar!</p>
-        </div>
-      </details>
-    </section>
-
-    <!-- Seção de Notificações com Integração Java -->
-    <section class="card">
-      <h2>Notificações do Sistema (Backend Java)</h2>
-      <p>Clique no botão para buscar a notificação vinda do servidor Java.</p>
-      
-      <button id="btnNotificacao" type="button">Buscar Notificação no Java</button>
-
-      <!-- Painel de Alerta Visual -->
-      <div id="painelAlerta" class="alerta-visual hidden" role="alert" aria-live="assertive">
-        <span class="icone" aria-hidden="true">🔔</span>
-        <div>
-          <strong id="textoAlerta">Carregando...</strong>
-          <p id="descricaoSom" style="font-size: 0.9em; font-style: italic; margin-top: 4px;"></p>
-        </div>
+        </article>
+        <article class="cartao">
+     <div class="cartao interno">
+         <div class="cartao-frente">
+             <img src="https://img.magnific.com/fotos-gratis/ao-por-do-sol-na-praia-tropical-e-no-mar-com-coqueiro_74190-1075.jpg?semt=ais_hybrid&w=740&q=80"alt="sol"class="cartao-imagem">
+             <p> é só um tempinho</p>
+         </div>
+         <div class="cartao-verso">
+            <img src="https://img.magnific.com/fotos-gratis/ao-por-do-sol-na-praia-tropical-e-no-mar-com-coqueiro_74190-1075.jpg?semt=ais_hybrid&w=740&q=80"alt="sol"class="cartao-imagem">
+             <p> é só um tempinho</p>
+         </div>
       </div>
-    </section>
+        </article>
+   </section>
   </main>
-
-  <!-- JavaScript integrado para comunicação com o Java -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const btnNotificacao = document.getElementById('btnNotificacao');
-      const painelAlerta = document.getElementById('painelAlerta');
-      const textoAlerta = document.getElementById('textoAlerta');
-      const descricaoSom = document.getElementById('descricaoSom');
-
-      btnNotificacao.addEventListener('click', async () => {
-        try {
-          // Faz a requisição para o servidor Java
-          const resposta = await fetch('http://localhost:8080/api/notificacao');
-          const dados = await resposta.json();
-
-          // Atualiza o conteúdo da tela com os dados do Java
-          textoAlerta.textContent = dados.mensagem;
-          descricaoSom.textContent = "Efeito sonoro: " + dados.descricaoSom;
-
-          // Exibe o painel e aplica o efeito visual
-          painelAlerta.classList.remove('hidden');
-          painelAlerta.classList.add('alerta-flash');
-
-          // Remove o efeito de piscar após 1.5 segundos
-          setTimeout(() => {
-            painelAlerta.classList.remove('alerta-flash');
-          }, 1500);
-
-        } catch (erro) {
-          console.error('Erro ao conectar com o backend Java:', erro);
-          alert('Certifique-se de que o programa Java está rodando!');
-        }
-      });
-    });
-  </script>
-</body>
-</html>Script integrado para comunicação com o Java -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const btnNotificacao = document.getElementById('btnNotificacao');
-      const painelAlerta = document.getElementById('painelAlerta');
-      const textoAlerta = document.getElementById('textoAlerta');
-      const descricaoSom = document.getElementById('descricaoSom');
-
-      btnNotificacao.addEventListener('click', async () => {
-        try {
-          // Faz a requisição para o servidor Java
-          const resposta = await fetch('http://localhost:8080/api/notificacao');
-          const dados = await resposta.json();
-
-          // Atualiza o conteúdo da tela com os dados do Java
-          textoAlerta.textContent = dados.mensagem;
-          descricaoSom.textContent = "Efeito sonoro: " + dados.descricaoSom;
-
-          // Exibe o painel e aplica o efeito visual
-          painelAlerta.classList.remove('hidden');
-          painelAlerta.classList.add('alerta-flash');
-
-          // Remove o efeito de piscar após 1.5 segundos
-          setTimeout(() => {
-            painelAlerta.classList.remove('alerta-flash');
-          }, 1500);
-
-        } catch (erro) {
-          console.error('Erro ao conectar com o backend Java:', erro);
-          alert('Certifique-se de que o programa Java está rodando!');
-        }
-      });
-    });
-  </script>
+   <footer > Projeto criado por aluno Gustavo L <footer>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
