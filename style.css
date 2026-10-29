@@ -1,72 +1,89 @@
-*{
-   margin: 0;
-   padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-.cabecalho{
-   padding: 15px 25px;
-   display: flex;
-   justify-content: espace-between;
-   align-items: center;
-   background-color: blue rgb(115, 115, 170);
-  }
-
-
-   .cartao{
-
-
-   width: 260px;
-   height: 200px;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: antiquewhite;
 }
-  .cartao-imagem{
-   width: 100%;
 
-
-  }
-   body{
-     display: flex;
-     flex-direction: column;
-     min-height: 100vh;
-     background-color: blue;
-
+.cabecalho {
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: chartreuse;
 }
-    main{
-        flex: 1;
-        display: flex;
-        align-items: center;
 
- }
+.cabecalho a {
+  color: aliceblue;
+  text-decoration: none;
+}
 
-    .cabecalho-link{
-        color:aliceblue;
-        text-decoration: none ;
+h1 {
+  color: aliceblue;
+  font-size: 24px;
+}
 
-    }
-    h1{
-      color:aliceblue;
-      font-size: 24px;
-    }
-      footer{
-        background-color: blue;
-        padding: 15px  25px;
-        color: antiquewhite;
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
 
-      }
+section {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 
-      .caetao-interno{
-        position:relative;
-        transition: transform 0.8s;
-        transform-style: preserve-3d;
+/* Estrutura dos Cartões (Flip Card) */
 
-      }
-        .cartao:hover  .cartao-interno{
-            transform: rotatey (180deg);
+.cartao {
+  width: 260px;
+  height: 200px;
+  perspective: 1000px; /* Adiciona profundidade 3D */
+}
 
-        }
-          .cartao-frente, .cartao-verso{
-            
-          }
+.cartao-interno {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
 
+.cartao:hover .cartao-interno {
+  transform: rotateY(180deg);
+}
 
+.cartao-frente,
+.cartao-verso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
 
+.cartao-frente {
+  background-color: #333;
+  color: white;
+}
+
+.cartao-verso {
+  background-color: #555;
+  color: white;
+  transform: rotateY(180deg);
+}
